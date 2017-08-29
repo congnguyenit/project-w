@@ -1,0 +1,183 @@
+FORMAT: 1A
+HOST: http://api.congnguyen.xyz/vk5v35/
+
+# VisiKard
+
+## get Credit Card List [/kashkard/wallet/user/getbalance]
+
+### get list credit card [POST]
+
++ Request (application/x-www-form-urlencoded)
+
+        fkUser=33287&deviceID=
+
++ Response 200 (application/json)
+
+    + Headers 
+    
+            Location: /kashkard/wallet/user/getbalance
+            
+    + Body
+    
+            {
+              "extend": null,
+              "clientMessage": "",
+              "status": "OK",
+              "statusCode": 200,
+              "result": []
+            }
+
+## get point [/point/get/point/level/{fkUser}]
+
++ Parameters
+    + fkUser - A path variable that is required for a valid URL
+
+### get point [GET]
++ Response 200 (application/json)
+
+    + Headers 
+    
+            Location: /kashkard/wallet/user/getbalance
+            
+    + Body
+    
+            {
+              "extend": null,
+              "clientMessage": "",
+              "status": "OK",
+              "statusCode": 200,
+              "result": []
+            }
+
+## get Gift Kards By konnect zone [/deal/get/giftKardsByUserAndKonnectzone/{userId}/{konnectZoneId}]
+
++ Parameters
+    + userId - A path variable that is required for a valid URL
+    + konnectZoneId - 
+    
+### get point [GET]
++ Response 200 (application/json)
+
+    + Headers 
+    
+            Location: /kashkard/wallet/user/getbalance
+            
+    + Body
+    
+            {
+              "extend": null,
+              "clientMessage": "",
+              "status": "OK",
+              "statusCode": 200,
+              "result": []
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## EXAMPLE [/questions]
+Example to base of API
+### List All Questions [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 2048
+                    }, {
+                        "choice": "Python",
+                        "votes": 1024
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 512
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+
+### Create a New Question [POST]
+
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "choices": [
+                "Swift",
+                "Python",
+                "Objective-C",
+                "Ruby"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
