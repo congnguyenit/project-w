@@ -72,8 +72,108 @@ HOST: http://api.congnguyen.xyz/vk5v35/
               "result": []
             }
 
+## Pay Without Product List [/api/payment/payWithoutProductList]
 
+### Pay Without Product List [POST]
 
++ Request (application/json)
+
+        {
+          "fkUser": "33922",
+          "orgAmount":11.00,
+          "amount":3.94,
+          "point":100,
+          "orderId":"bhdyYhdjwUnvsdkiqu",
+          "deviceId":"ffffffff-f5c3-b7ec-ffff-ffffeabf4809",
+          "vendorId":"1120",
+          "kashKardToken":"3a7238cf18994e05aa83ee91286de77f",
+          "invoiceNumber":"6374827218",
+          "giftKards": [
+            {
+              "giftKardId": 1234,
+              "giftKardAmount":15.04,
+              "redeemAmount":5.03
+            },
+            {
+              "giftKardId": 1235,
+              "giftKardAmount":10.64,
+              "redeemAmount":1.03
+            }
+          ]
+        }
+
++ Response 200 (application/json)
+
+    + Headers 
+    
+            Location: /api/payment/payWithoutProductList
+            
+    + Body
+    
+            {
+              "extend": null,
+              "clientMessage": "",
+              "status": "OK",
+              "statusCode": 200,
+              "result": []
+            }
+
+## get minimum amount [/utils/getminamount]
+    
+### get point [GET]
++ Response 200 (application/json)
+
+    + Headers 
+    
+            Location: /utils/getminamount
+            
+    + Body
+    
+            {
+              "extend": null,
+              "clientMessage": "",
+              "status": "OK",
+              "statusCode": 200,
+              "result": [5.0]
+            }
+
+## get max point percent can  use [/utils/getmaxpoint]
+    
+### get point [GET]
++ Response 200 (application/json)
+
+    + Headers 
+    
+            Location: /utils/getmaxpoint
+            
+    + Body
+    
+            {
+              "extend": null,
+              "clientMessage": "",
+              "status": "OK",
+              "statusCode": 200,
+              "result": 10.0
+            }
+
+## get list of showcase point user can choose [/utils/getpointcfg]
+    
+### get point [GET]
++ Response 200 (application/json)
+
+    + Headers 
+    
+            Location: /utils/getpointcfg
+            
+    + Body
+    
+            {
+              "extend": null,
+              "clientMessage": "",
+              "status": "OK",
+              "statusCode": 200,
+              "result": [3,5,10]
+            }
 
 
 
