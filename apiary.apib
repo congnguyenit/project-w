@@ -120,7 +120,7 @@ HOST: http://api.congnguyen.xyz/vk5v35/
 
 ## get minimum amount [/utils/getminamount]
     
-### get point [GET]
+### get minimum amount [GET]
 + Response 200 (application/json)
 
     + Headers 
@@ -137,9 +137,9 @@ HOST: http://api.congnguyen.xyz/vk5v35/
               "result": [5.0]
             }
 
-## get max point percent can  use [/utils/getmaxpoint]
+## get maximum percent of point, which user can use [/utils/getmaxpoint]
     
-### get point [GET]
+### get maximum percent of point [GET]
 + Response 200 (application/json)
 
     + Headers 
@@ -156,9 +156,9 @@ HOST: http://api.congnguyen.xyz/vk5v35/
               "result": 10.0
             }
 
-## get list of showcase point user can choose [/utils/getpointcfg]
+## get list of option point user can choose [/utils/getpointcfg]
     
-### get point [GET]
+### get list of option point choice [GET]
 + Response 200 (application/json)
 
     + Headers 
@@ -173,6 +173,34 @@ HOST: http://api.congnguyen.xyz/vk5v35/
               "status": "OK",
               "statusCode": 200,
               "result": [3,5,10]
+            }
+
+## get payment setting [/utils/paymentsetting]
+    
+### get payment setting [GET]
++ Response 200 (application/json)
+
+    + Headers 
+    
+            Location: /utils/paymentsetting
+            
+    + Body
+    
+            {
+                "clientMessage": "",
+                "extend": null,
+                "statusCode": 200,
+                "status": "OK",
+                "result": {
+                    "minAmount": 5,
+                    "maxPoint": 10,
+                    "listChoice": [
+                        3,
+                        5,
+                        10
+                    ],
+                    "pointRatio": 1000
+                }
             }
 
 
