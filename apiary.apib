@@ -65,57 +65,83 @@ HOST: http://api.congnguyen.xyz/vk5v35/
     + Body
     
             {
-              "extend": null,
-              "clientMessage": "",
-              "status": "OK",
-              "statusCode": 200,
-              "result": []
+                "clientMessage": "",
+                "extend": null,
+                "statusCode": 200,
+                "status": "OK",
+                "result": [
+                    {
+                        "cert_value": 95,
+                        "purchase_value": 100,
+                        "thumb": "http://stg.visikard.com/cache/new/users/34666/gk_image_code_qr_20179171443.png",
+                        "img": "http://stg.visikard.com/cache/new/users/34666/gk_image_code_qr_20179171443.png",
+                        "currency": "",
+                        "name": "KaKaKa",
+                        "id": 2284,
+                        "type": 1
+                    },
+                    {
+                        "cert_value": 55,
+                        "purchase_value": 100,
+                        "thumb": "http://stg.visikard.com/cache/new/users/34666/gk_image_code_qr_20179171443.png",
+                        "img": "http://stg.visikard.com/cache/new/users/34666/gk_image_code_qr_20179171443.png",
+                        "currency": "",
+                        "name": "KaKaKa",
+                        "id": 2285,
+                        "type": 1
+                    }
+                ]
             }
 
-## Pay Without Product List [/api/payment/payWithoutProductList]
+## Payment [/api/payment/execute]
 
 ### Pay Without Product List [POST]
 
 + Request (application/json)
 
         {
-          "fkUser": "33922",
-          "orgAmount":11.00,
-          "amount":3.94,
-          "point":100,
-          "orderId":"bhdyYhdjwUnvsdkiqu",
-          "deviceId":"ffffffff-f5c3-b7ec-ffff-ffffeabf4809",
-          "vendorId":"1120",
-          "kashKardToken":"3a7238cf18994e05aa83ee91286de77f",
-          "invoiceNumber":"6374827218",
-          "giftKards": [
-            {
-              "giftKardId": 1234,
-              "giftKardAmount":15.04,
-              "redeemAmount":5.03
-            },
-            {
-              "giftKardId": 1235,
-              "giftKardAmount":10.64,
-              "redeemAmount":1.03
-            }
-          ]
+            "amount" : 2,
+            "sessionId":"WK2WGOYDT3D8AHXBDDXC3XM16LJ5VIRU37KONQVT",
+            "deviceId" : "D034F820-DCBB-4799-A9CD-B44CBF6901DC",
+            "fkUser" : 34665,
+            "cvv":"900",
+            "groupId" : 538,
+            "kashKardToken" : "62843835bca94755ac92851e8d762741",
+            "orgAmount" : 12,
+            "point" : 0,
+            "giftKards": [{
+                    "giftKardAmount" : 100,
+                    "giftKardId" : 2285,
+                    "redeemAmount" : 10,
+                    "type":1
+                }],//nullable
+            "coupon":{}//nullable
         }
 
 + Response 200 (application/json)
 
     + Headers 
     
-            Location: /api/payment/payWithoutProductList
+            Location: /api/payment/execute
             
     + Body
     
             {
-              "extend": null,
-              "clientMessage": "",
-              "status": "OK",
-              "statusCode": 200,
-              "result": []
+                "clientMessage": "SUCCESS",
+                "extend": null,
+                "statusCode": 0,
+                "status": "OK",
+                "result": {
+                    "status": 0,
+                    "message": "SUCCESS",
+                    "exception": null,
+                    "result": {
+                        "paymentStatus": null,
+                        "transactionId": "e78d1805da1c4f71bc9c0c5b70a0d866",
+                        "statusCode": "",
+                        "invoiceBalance": "2.0",
+                        "status": "0"
+                    }
             }
 
 ## get minimum amount [/utils/getminamount]
