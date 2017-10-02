@@ -132,16 +132,11 @@ HOST: http://stg.visikard.com/v36/
                 "statusCode": 0,
                 "status": "OK",
                 "result": {
-                    "status": 0,
-                    "message": "SUCCESS",
-                    "exception": null,
-                    "result": {
-                        "paymentStatus": null,
-                        "transactionId": "e78d1805da1c4f71bc9c0c5b70a0d866",
-                        "statusCode": "",
-                        "invoiceBalance": "2.0",
-                        "status": "0"
-                    }
+                    "paymentStatus": null,
+                    "transactionId": "e78d1805da1c4f71bc9c0c5b70a0d866",
+                    "statusCode": "",
+                    "invoiceBalance": "2.0",
+                    "status": "0"
             }
 
 ## get minimum amount [/utils/getminamount]
@@ -199,6 +194,64 @@ HOST: http://stg.visikard.com/v36/
               "status": "OK",
               "statusCode": 200,
               "result": [3,5,10]
+            }
+            
+
+## get Coupon for user by merchant konnect zone [/special/coupon/merchant/user/all]
+    
+### get payment setting [POST]
++ Request (application/x-www-form-urlencoded)
+
+        fkUser=33287&konnecZoneId=1234
+        
++ Response 200 (application/json)
+
+    + Headers 
+    
+            Location: /special/coupon/merchant/user/all
+            
+    + Body
+    
+            {
+                "clientMessage": "",
+                "extend": null,
+                "statusCode": 200,
+                "status": "OK",
+                "result": [
+                    {
+                        "fkUser": 13087,
+                        "longitude": "",
+                        "latitude": "",
+                        "merchantName": "GOL",
+                        "fkKard": 7276,
+                        "specailDetail": "",
+                        "textImage1": "",
+                        "imageSpecial": "https://s3.amazonaws.com/vk3prd/vk3/users/13087/cp_image_code_qr_20179253920.png",
+                        "imageShow": "https://s3.amazonaws.com/vk3prd/vk3/users/13087/cp_image_code_qr_20179253920.png",
+                        "campaignType": -1,
+                        "expireDate": "2018-08-30 12:09:22.0",
+                        "campaignDetail": "dien-cp",
+                        "categoryCard": 1,
+                        "conditions": "",
+                        "isGiftKard": 2,
+                        "aboutBusiness": "",
+                        "logos": "https://s3.amazonaws.com/vk3prd/vk3/images/trophytemplate/13087/thumb_Graphic_13087_2015826114053.jpg",
+                        "textImage2": "",
+                        "isOffer": 9,
+                        "idCoupon": 7675,
+                        "icons": null,
+                        "imageKard": "https://s3.amazonaws.com/vk3prd/vk3/users/13087/cp_image_code_qr_20179253920.png",
+                        "idCampaignSpecail": 6250,
+                        "address": "Hẻm 480 Nguyễn Tri Phương, Ho Chi Minh City, Ho Chi Minh, Vietnam",
+                        "location": [
+                            {
+                                "longitude": "106.66788010000005",
+                                "latitude": "10.7670764",
+                                "optionLocation": "H?m 480 Nguy?n Tri Ph??ng, Ho Chi Minh City, Ho Chi Minh, Vietnam"
+                            }
+                        ]
+                    }
+                ]
             }
 
 ## get payment setting [/utils/paymentsetting]
