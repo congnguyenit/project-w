@@ -93,7 +93,7 @@ HOST: http://stg.visikard.com/v36/
                 ]
             }
 
-## Payment [/api/payment/execute]
+## Payment [/api/payment/init]
 
 ### Init Transaction(without product list -> ) [POST]
 
@@ -109,6 +109,11 @@ HOST: http://stg.visikard.com/v36/
             "kashKardToken" : "62843835bca94755ac92851e8d762741",
             "orgAmount" : 12,
             "point" : 0,
+            "products":[{
+                    "id": "123",
+                    "quantity": 1,
+                    "price": 5.9
+                }],
             "giftKards": [{
                     "giftKardAmount" : 100,
                     "giftKardId" : 2285,
