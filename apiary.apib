@@ -120,14 +120,19 @@ HOST: http://stg.visikard.com/v36/
                     "redeemAmount" : 10,
                     "type":1
                 }],//nullable
-            "coupon":{}//nullable
+            "coupon":{
+                    "couponId": 123,
+                    "percent": 0,
+                    "amount": 1.0,
+                    "type":1
+            }//nullable
         }
 
 + Response 200 (application/json)
 
     + Headers 
     
-            Location: /api/payment/execute
+            Location: /api/payment/init
             
     + Body
     
@@ -204,7 +209,7 @@ HOST: http://stg.visikard.com/v36/
 
 ## get Coupon for user by merchant konnect zone [/special/coupon/merchant/user/all]
     
-### get payment setting [POST]
+### get Coupon for user by merchant konnect zone [POST]
 + Request (application/x-www-form-urlencoded)
 
         fkUser=33287&konnecZoneId=1234
