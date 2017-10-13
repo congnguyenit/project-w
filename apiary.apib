@@ -95,7 +95,7 @@ HOST: http://stg.visikard.com/v36/
 
 ## Payment [/api/payment/init]
 
-### Init Transaction(without product list -> ) [POST]
+### Init Transaction[POST]
 
 + Request (application/json)
 
@@ -223,41 +223,43 @@ HOST: http://stg.visikard.com/v36/
     + Body
     
             {
-                "clientMessage": "",
                 "extend": null,
+                "clientMessage": "",
                 "statusCode": 200,
                 "status": "OK",
                 "result": [
                     {
-                        "fkUser": 13087,
-                        "longitude": "",
-                        "latitude": "",
-                        "merchantName": "GOL",
-                        "fkKard": 7276,
-                        "specailDetail": "",
-                        "textImage1": "",
-                        "imageSpecial": "https://s3.amazonaws.com/vk3prd/vk3/users/13087/cp_image_code_qr_20179253920.png",
-                        "imageShow": "https://s3.amazonaws.com/vk3prd/vk3/users/13087/cp_image_code_qr_20179253920.png",
-                        "campaignType": -1,
-                        "expireDate": "2018-08-30 12:09:22.0",
-                        "campaignDetail": "dien-cp",
-                        "categoryCard": 1,
-                        "conditions": "",
-                        "isGiftKard": 2,
-                        "aboutBusiness": "",
-                        "logos": "https://s3.amazonaws.com/vk3prd/vk3/images/trophytemplate/13087/thumb_Graphic_13087_2015826114053.jpg",
-                        "textImage2": "",
-                        "isOffer": 9,
-                        "idCoupon": 7675,
+                        "couponDetailLabel": "[{\"label\":\"30% OFF FOR LUNCH OR DINNERS\",\"value1\":\"30\",\"value2\":\"30\"}]",
+                        "type": 0,
+                        "fkUser": 33920,
+                        "merchantName": "Vy Restaurant",
+                        "imageKard": "http://stg.visikard.com/cache/new/users/33920/cp_image_code_qr_201652682838.png",
                         "icons": null,
-                        "imageKard": "https://s3.amazonaws.com/vk3prd/vk3/users/13087/cp_image_code_qr_20179253920.png",
-                        "idCampaignSpecail": 6250,
-                        "address": "Hẻm 480 Nguyễn Tri Phương, Ho Chi Minh City, Ho Chi Minh, Vietnam",
+                        "idCampaignSpecail": 4159,
+                        "campaignType": -1,
+                        "specailDetail": "30% OFF FOR LUNCH OR DINNERS, IN ONE MONTH",
+                        "textImage1": "",
+                        "campaignDetail": "30% OFF FOR LUNCH OR DINNERS",
+                        "latitude": "",
+                        "longitude": "",
+                        "isGiftKard": 2,
+                        "categoryCard": 1,
+                        "fkKard": 7036,
+                        "logos": "http://stg.visikard.com/cache/new/images/trophytemplate/33920/thumb_Graphic_33920_201652311822.jpg",
+                        "imageSpecial": "http://stg.visikard.com/cache/new/users/33920/cp_image_code_qr_201652682838.png",
+                        "textImage2": "",
+                        "idCoupon": 5306,
+                        "conditions": "",
+                        "aboutBusiness": "",
+                        "imageShow": "http://stg.visikard.com/cache/new/users/33920/cp_image_code_qr_201652682838.png",
+                        "isOffer": 0,
+                        "expireDate": "2016-06-30 05:28:39.0",
+                        "address": "666 Cách Mạng tháng Tám, phường 5, Ho Chi Minh, Vietnam",
                         "location": [
                             {
-                                "longitude": "106.66788010000005",
-                                "latitude": "10.7670764",
-                                "optionLocation": "H?m 480 Nguy?n Tri Ph??ng, Ho Chi Minh City, Ho Chi Minh, Vietnam"
+                                "optionLocation": "666 Cách Mạng tháng Tám, phường 5, Ho Chi Minh, Vietnam",
+                                "latitude": "10.7890767",
+                                "longitude": "106.66055119999999"
                             }
                         ]
                     }
