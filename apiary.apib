@@ -60,7 +60,7 @@ HOST: http://stg.visikard.com/v36/
 
     + Headers 
     
-            Location: /kashkard/wallet/user/getbalance
+            Location: deal/get/giftKardsByUserAndKonnectzone/{userId}/{konnectZoneId}
             
     + Body
     
@@ -274,6 +274,63 @@ HOST: http://stg.visikard.com/v36/
     + Headers 
     
             Location: /utils/paymentsetting
+            
+    + Body
+    
+            {
+                "clientMessage": "",
+                "extend": null,
+                "statusCode": 200,
+                "status": "OK",
+                "result": {
+                    "minAmount": 5,
+                    "maxPoint": 10,
+                    "listChoice": [
+                        3,
+                        5,
+                        10
+                    ],
+                    "pointRatio": 1000
+                }
+            }
+            
+            
+## confirm payment [/api/payment/confirm]
+    
+### confirm payment [POST]
+Request (application/json)
+
+        {
+            "merchantId": "123",
+            "deviceId":"123",
+            "userId":"123",
+            "transactionId":"123"
+        }
+
++ Response 200 (application/json)
+
+    + Headers 
+    
+            Location: /api/payment/confirm
+            
+    + Body
+    
+            {
+                "extend": null,
+                "clientMessage": "SUCCESS",
+                "statusCode": 1404,
+                "status": "FAIL",
+                "result": []
+            }
+            
+## vkregister confirm payment [/api/vk/order/{merchantId}/{deviceId}/{userId}/{transactionId}]
+    
+### vkregister confirm payment [GET]
++ Response 200 (application/json)
+
+    + Headers 
+    
+            Location: /api/vk/order/{merchantId}/{deviceId}/{userId}/{transactionId}
             
     + Body
     
